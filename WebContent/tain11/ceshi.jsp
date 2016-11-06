@@ -11,9 +11,6 @@
 %>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>添加数据</title>
-<!-- <link href="dist/css/jquery.snippet.css" rel="stylesheet" media="screen"> -->
-<link href="styles/shCore.css" rel="stylesheet" media="screen">
-<link href="styles/shCoreDefault.css" rel="stylesheet" media="screen">
 <style type="text/css">
 xmp{
 text-align:left;
@@ -25,7 +22,7 @@ margin:auto;
 </style>
 </head>
 <body onload="prettyPrint()">
-<pre class="brush:js">
+<pre class="prettyprint">
 <xmp>
 	<%
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
@@ -46,28 +43,8 @@ margin:auto;
 
 	</xmp>
 	</pre>
-<!-- <link href="dist/css/prettify.css" rel="stylesheet"/> -->
-<!-- <script src="dist/js/prettify.js"></script> -->
+<link href="dist/css/prettify.css" rel="stylesheet"/>
+<script src="dist/js/prettify.js"></script>
 
-<script src="scripts/shCore.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-    SyntaxHighlighter.autoloader(
-            ['js','jscript','javascript','WebContent/scripts/shBrushJScript.js'],
-            ['bash','shell','WebContent/scripts/shBrushBash.js'],
-            ['css','WebContent/scripts/shBrushCss.js'],
-            ['xml','html','WebContent/scripts/shBrushXml.js'],
-            ['sql','WebContent/scripts/shBrushSql.js'],
-            ['php','WebContent/scripts/shBrushPhp.js']
-        ); 
-    SyntaxHighlighter.all(); 
-})
-</script>
-
-<script>
-// 	$("#demo").snippet("javascript", { style: "random", collapse: true, startCollapsed: false});
-// 	$("#demo2").snippet("javascript", { style: "random", collapse: true, startCollapsed: false});
-// 	$("#demo3").snippet("javascript", { style: "random", collapse: true, startCollapsed: false});
- </script>
 </body>
 </html>
