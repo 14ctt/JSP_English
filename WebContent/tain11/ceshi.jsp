@@ -29,7 +29,7 @@ margin:auto;
 		String connectSQL = "jdbc:sqlserver://localhost:1433;DatabaseName=xs";
 		Connection conn = java.sql.DriverManager.getConnection(connectSQL, "sa", "");
 		Statement stmt = conn.createStatement();
-		ResultSet sw = stmt.executeQuery("select * from txt");
+		ResultSet sw = stmt.executeQuery("select txt from daima where id='"+request.getParameter("id")+"'");
 		String ww = null;
 		while (sw.next()) {
 			%>			
@@ -43,8 +43,7 @@ margin:auto;
 
 	</xmp>
 	</pre>
-<link href="dist/css/prettify.css" rel="stylesheet"/>
-<script src="dist/js/prettify.js"></script>
-
+<link href="../dist/css/prettify.css" rel="stylesheet"/>
+<script src="../dist/js/prettify.js"></script>
 </body>
 </html>
