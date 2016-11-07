@@ -48,6 +48,22 @@ height:80px;
 }
 
 </style>
+<%
+String check=(String)session.getAttribute("id");
+if(check==null||check.equals("")){	
+}else{
+	%>
+	<script type="text/javascript">
+	alert("<%=check%>");
+
+	</script>
+	
+	<% 
+	if(check.equals("用户名或密码错误！")){
+	session.setAttribute("id","");
+	}
+}
+%>
 </head>
 <body bgcolor="#6C6C6C">
 <div class="container">
@@ -62,7 +78,7 @@ height:80px;
         </ul>
       </div>
       </div>
-	<form class="form-horizontal" action="../00/bootstrapceshi.jsp">
+	<form class="form-horizontal" action="../00/checkLogin.jsp">
 		<div class="dv">
 		<hr size="1"  />
 			<div >
@@ -73,7 +89,7 @@ height:80px;
 			<div class="control-group">
 
 				<div class="controls">
-					<input type="text" name="userName" id="inputEmail" placeholder="用户账号">
+					<input type="text" name="name" id="inputEmail" placeholder="用户账号">
 				</div>
 			</div>
 			<div class="control-group">
@@ -83,7 +99,7 @@ height:80px;
 				</div>
 			</div>
 			<button type="submit" class="btn btn-primary">登录</button>
-			<a href="dsf.jsp"><button type="button" class="btn btn-primary">注册</button></a> 
+			<a href="注册界面.jsp"><button type="button" class="btn btn-primary">注册</button></a> 
 					<!--<button type="submit" class="btn btn-large btn-block btn-primary">登录</button>
 					 
 					<button class="btn btn-large btn-block btn-primary">注册</button>-->
