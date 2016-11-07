@@ -6,19 +6,33 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>Insert title here</title>
    <style type="text/css">
+   .ds{
+    background: #8E8E8E;
+   }
         #inc {
-            margin: 100px auto;
-            width: 350px;
+        text-align:center;
+       padding-top:10%;
+       
+        margin:50px auto;
+            width: 500px;
+            height:500px;
+            background: white;
         }
         #dvName, #dvPwd, #dvPwd2, #dvBirth, #dvEmail {
             color: red;
         }
         body{
-           background-color:blue;
+	        margin:0px;
+	        padding:0px;
+           background:red;
+        }
+        .container{
+        margin:0px;
+        background: #8E8E8E;
         }
     </style>
     <script type="text/javascript">
-
+   
         function checkName() {        
             var uName = document.getElementById("uName").value;
             var dvName = document.getElementById("dvName");
@@ -111,16 +125,16 @@
    
 </head>
 <body>
-
+<div class="ds">
 <div class="container">
       <div class="masthead">
-                <ul class="nav nav-justified">
+           <ul class="nav nav-justified">
           <li><a href="bootstrapceshi.jsp">首页</a></li>
           <li><a href="#">时间</a></li>
           <li><a href="../tain11/ceshi2.jsp">上传</a></li>
           <li class="active"><a href="注册界面.jsp">注    册</a></li>
-          <li><a href="#">登    录</a></li>
-          <li><a href="#">退    出</a></li>
+          <li><a href="../00/Login.jsp">登    录</a></li>
+          <li><a href="../00/Login.jsp">退    出</a></li>
         </ul>
       </div>
     <form method="get" action="success.html" onsubmit="return checkAll()">
@@ -135,6 +149,7 @@
         <input type="submit" value="提交注册">&nbsp;&nbsp;<input type="reset" value="重置">
         </div>
     </form>
+    </div>
     </div>
 </body>
 </html>

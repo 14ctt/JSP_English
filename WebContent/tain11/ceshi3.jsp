@@ -26,7 +26,7 @@
 		PreparedStatement ps = conn.prepareStatement(sql);
 		String id=request.getParameter("id");
 		String txt=request.getParameter("txt");
-		ps.setString(1, "1");
+		ps.setString(1, id);
 		ps.setString(2, txt);
 		int c = ps.executeUpdate();
 		if(c!=0){
@@ -36,7 +36,7 @@
 		}
 		ps.close();
 		conn.close();
-		response.sendRedirect("tain11/ceshi2.jsp");
+		response.sendRedirect("ceshi2.jsp");
 	%>
 </body>
 </html>

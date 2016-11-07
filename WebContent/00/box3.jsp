@@ -79,6 +79,7 @@
 		}
 	</style>
 	<body>
+	
 		<div class="down"></div>
 		<div class="center"></div>
 		<div class="up"></div>
