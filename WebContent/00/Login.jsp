@@ -64,6 +64,23 @@ if(check==null||check.equals("")){
 	}
 }
 %>
+<%
+		String weo = "请先退出！";
+		String as = "";
+		String ch = (String) session.getAttribute("id");
+		if (ch == null || ch.equals("")) {
+			
+	
+		} else {
+			%>
+			<script type="text/javascript">
+			alert("<%=weo%>	");
+			</script>
+			<%
+			as = " disabled='disabled' ";
+
+		}
+	%>
 </head>
 <body bgcolor="#6C6C6C">
 <div class="container">
@@ -90,13 +107,13 @@ if(check==null||check.equals("")){
 			<div class="control-group">
 
 				<div class="controls">
-					<input type="text" name="name" id="inputEmail" placeholder="用户账号">
+					<input type="text" <%=as %> name="name" id="inputEmail" placeholder="用户账号">
 				</div>
 			</div>
 			<div class="control-group">
 
 				<div class="controls">
-					<input type="password" name="password" id="inputPassword" placeholder="用户密码">
+					<input type="password" <%=as %> name="password" id="inputPassword" placeholder="用户密码">
 				</div>
 			</div>
 			<button type="submit" class="btn btn-primary">登录</button>
