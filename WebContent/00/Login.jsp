@@ -49,13 +49,27 @@ height:80px;
 
 </style>
 <%
+String wos=(String)session.getAttribute("daimaw");
+if(!(wos==null||wos.equals(""))){
+	%>
+	<script type="text/javascript">
+	window.onload=function(){
+	alert("<%=wos%>");
+	}
+	</script>
+	<%	
+	session.setAttribute("daimaw", "");
+}
+%>
+<%
 String check=(String)session.getAttribute("id");
 if(check==null||check.equals("")){	
 }else{
 	%>
 	<script type="text/javascript">
+	window.onload=function(){
 	alert("<%=check%>");
-
+	}
 	</script>
 	
 	<% 
@@ -89,7 +103,7 @@ if(check==null||check.equals("")){
 <div class="masthead">
                 <ul class="nav nav-justified">
           <li><a href="../00/bootstrapceshi.jsp">首页</a></li>
-          <li><a href="#">时间</a></li>
+          <li><a href="../00/dmgl.jsp">代码查看</a></li>
           <li><a href="../tain11/ceshi2.jsp">上传</a></li>
           <li ><a href="zhuche.jsp">注    册</a></li>
          

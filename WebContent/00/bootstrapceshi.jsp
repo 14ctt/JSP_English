@@ -37,7 +37,7 @@
         
         <ul class="nav nav-justified">
           <li class="active"><a href="../00/bootstrapceshi.jsp">首页</a></li>
-          <li><a href="#">时间</a></li>
+          <li><a href="../00/dmgl.jsp">代码查看</a></li>
           <li><a href="../tain11/ceshi2.jsp">上    传</a></li>
           <li><a href="zhuche.jsp">注    册</a></li>
           <%
@@ -66,19 +66,19 @@
         <div class="col-lg-4">
           <h2>随机矩形框!</h2>
            <img class="pic" width="250px" height="250px" src="../img/1.png"/>
-         <p><a class="btn btn-primary" href="box.jsp" role="button">效果浏览 &raquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-primary" href="../tain11/ceshi.jsp?id=1" role="button">查看源代码 &raquo;</a></p>
+         <p><a class="btn btn-primary" href="box.jsp" role="button">效果浏览 &raquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-primary" href="../tain11/ceshi.jsp?id=1&name=1" role="button">查看源代码 &raquo;</a></p>
         
         </div>
         <div class="col-lg-4">
         <h2>炫酷照片墙!</h2>
         <img class="pic" width="250px" height="250px" src="../img/2.png"/><br>
-        <p><a class="btn btn-primary" href="box1.jsp" role="button">效果浏览 &raquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-primary" href="../tain11/ceshi.jsp?id=2" role="button">查看源代码 &raquo;</a></p>
+        <p><a class="btn btn-primary" href="box1.jsp" role="button">效果浏览 &raquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-primary" href="../tain11/ceshi.jsp?id=2&name=2" role="button">查看源代码 &raquo;</a></p>
        
        </div>
         <div class="col-lg-4">
         <h2>炫酷喷泉!</h2>
           <img class="pic" width="250px" height="250px" src="../img/3.png"/><br>
-          <p><a class="btn btn-primary" href="box2.jsp" role="button">效果浏览 &raquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-primary" href="../tain11/ceshi.jsp?id=3" role="button">查看源代码 &raquo;</a></p>
+          <p><a class="btn btn-primary" href="box2.jsp" role="button">效果浏览 &raquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-primary" href="../tain11/ceshi.jsp?id=3&name=3" role="button">查看源代码 &raquo;</a></p>
          
         </div>
       </div>

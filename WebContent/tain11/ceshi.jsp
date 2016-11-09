@@ -22,6 +22,7 @@ xmp{
 text-align:left;
 border:1px solid blue;
 width:auto;
+min-height:200px;
 line-height:auto;
 margin:auto;
 }
@@ -43,19 +44,27 @@ right:3%;
 </head>
 <body onload="prettyPrint()">
 <div class="div3 d"><a href="../00/bootstrapceshi.jsp">
-  <span class="glyphicon glyphicon-share-alt"> 返回主页</span>
-</a></div>
+  <span class="glyphicon glyphicon-share-alt"> 返回主页</span></a><br><br><br>
+ <a href="../00/dmgl.jsp" ><span class="glyphicon glyphicon-share-alt"> 到代码管理</span></a>
+</div>
 <div class="div3"><a href="#">
   <span class="glyphicon glyphicon-chevron-up"> <br>TOP</span>
 </a></div>
 <pre class="prettyprint">
 <xmp>
 	<%
+	
+		String id=request.getParameter("id");		
+	  	String check = (String) session.getAttribute("id");
+	  	if (!(check == null || check.equals(""))) {
+	  		id=check;
+	  	}
+	
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
 		String connectSQL = "jdbc:sqlserver://localhost:1433;DatabaseName=xs";
 		Connection conn = java.sql.DriverManager.getConnection(connectSQL, "sa", "");
 		Statement stmt = conn.createStatement();
-		ResultSet sw = stmt.executeQuery("select txt from daima where id='"+request.getParameter("id")+"'");
+		ResultSet sw = stmt.executeQuery("select txt from daima where id='"+id+"' and name='"+request.getParameter("name")+"'");
 		String ww = null;
 		while (sw.next()) {
 			%>			

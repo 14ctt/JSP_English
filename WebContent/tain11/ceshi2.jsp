@@ -68,7 +68,7 @@ div {
 			<div class="masthead">
 				<ul class="nav nav-justified">
 					<li><a href="../00/bootstrapceshi.jsp">首页</a></li>
-					<li><a href="#">时间</a></li>
+					<li><a href="../00/dmgl.jsp">代码查看</a></li>
 					<li class="active"><a href="../tain11/ceshi2.jsp">上传</a></li>
 					<li><a href="../00/zhuche.jsp">注 册</a></li>
 					<%
