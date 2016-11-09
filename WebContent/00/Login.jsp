@@ -74,7 +74,9 @@ if(check==null||check.equals("")){
 		} else {
 			%>
 			<script type="text/javascript">
+			window.onload=function(){
 			alert("<%=weo%>	");
+			}
 			</script>
 			<%
 			as = " disabled='disabled' ";

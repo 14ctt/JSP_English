@@ -11,6 +11,11 @@
 
 </head>
 <body>
+<jsp:useBean id="user" class="sj.Shijian" scope="session"></jsp:useBean>
+<jsp:setProperty property="name" name="user" param="name"/>
+<jsp:setProperty property="password" name="user" param="password"/>
+<jsp:setProperty property="rq" name="user" param="rq"/>
+<jsp:setProperty property="yj" name="user" param="yj"/>
 <%
 boolean s=true;
 request.setCharacterEncoding("utf-8");
@@ -20,17 +25,22 @@ Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
 String SQL = "jdbc:sqlserver://localhost:1433;DatabaseName=xs";
 Connection con=java.sql.DriverManager.getConnection(SQL,"sa","");
 
+String n=user.getName();
+String p=user.getPassword();
+String r=user.getRq();
+String y=user.getYj();
 
-String name=request.getParameter("name");
-String password=request.getParameter("password");
-String rq=request.getParameter("rq"); 
-String yj=request.getParameter("yj");
+
+// String name=request.getParameter("name");
+// String password=request.getParameter("password");
+// String rq=request.getParameter("rq"); 
+// String yj=request.getParameter("yj");
 
 String sql1 = "select * from username";
 PreparedStatement ps1=con.prepareStatement(sql1);
 ResultSet rs=ps1.executeQuery();
 while(rs.next()){
-	if(name.equals(rs.getString("name"))){
+	if(n.equals(rs.getString("name"))){
 		session.setAttribute("c2", "用户名重复！");
 		response.sendRedirect("zhuche.jsp");
 		s=false;
@@ -42,10 +52,10 @@ if(s){
 String sql = "insert into username values(?,?,?,?)";
 PreparedStatement ps=con.prepareStatement(sql);
 
-ps.setString(1, name);
-ps.setString(2, password);
-ps.setString(3, rq);
-ps.setString(4, yj);
+ps.setString(1, n);
+ps.setString(2, p);
+ps.setString(3, r);
+ps.setString(4, y);
 
 int c=ps.executeUpdate();
 

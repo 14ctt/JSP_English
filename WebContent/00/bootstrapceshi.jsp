@@ -5,24 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
-<!-- <link rel="shortcut icon" href="../../assets/ico/favicon.ico"> -->
 
-    <title>Justified Nav Template for Bootstrap</title>
-
-    <!-- Bootstrap core CSS -->
+    <title>首页</title>
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="../css/justified-nav.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+   
         <script type="text/javascript">
     function showTime()
         {

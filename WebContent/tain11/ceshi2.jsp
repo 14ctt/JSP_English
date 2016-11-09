@@ -54,7 +54,9 @@ div {
 			as = " disabled='disabled' ";
 	%>
 	<script type="text/javascript">
+	window.onload=function(){
 	alert("<%=weo%>	");
+	}
 	</script>
 	<%
 		} else {
