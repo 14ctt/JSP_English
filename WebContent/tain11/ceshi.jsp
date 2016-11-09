@@ -16,7 +16,7 @@
 	response.setContentType("text/html;charset=utf-8");
 %>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>添加数据</title>
+<title>查询</title>
 <style type="text/css">
 xmp{
 text-align:left;

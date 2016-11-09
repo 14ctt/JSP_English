@@ -43,6 +43,7 @@ div {
 <!-- Custom styles for this template -->
 <link href="../css/justified-nav.css" rel="stylesheet">
 
+</script>
 </head>
 <body>
 	<%
@@ -81,12 +82,13 @@ div {
 				</ul>
 			</div>
 		</div>
-		<form action="../tain11/ceshi3.jsp">
+		<form onsubmit="c()" action="../tain11/ceshi3.jsp" method="post">
 			<div class="div1">
 				<div>
-					<button <%=as%> type="submit">上传</button>
+					<button <%=as%>  type="submit">上传</button>
 				</div>
-				<textarea <%=as%> rows="100" cols="100" name="txt"></textarea>
+				<input <%=as %> id="wen" name="name" placeholder="文件名称"/>
+				<textarea <%=as%> id="nei" rows="100" cols="100" name="txt"></textarea>
 			</div>
 		</form>
 	</div>
