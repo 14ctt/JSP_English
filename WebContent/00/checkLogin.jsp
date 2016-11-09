@@ -20,7 +20,7 @@
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
 			String connectSQL = "jdbc:sqlserver://localhost:1433;DatabaseName=xs";
 			Connection conn = java.sql.DriverManager.getConnection(connectSQL, "sa", "");
-			String sql = "select name from username where name=? and password=?";
+			String sql = "select name from username where name=? and password2=?";
 			PreparedStatement st = conn.prepareStatement(sql);
 			String name = request.getParameter("name");
 			String password = request.getParameter("password");
