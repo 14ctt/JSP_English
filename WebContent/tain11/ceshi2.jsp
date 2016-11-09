@@ -12,56 +12,83 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
 <%
-String check=(String)session.getAttribute("check");
-if(check==null||check.equals("")){	
-}else{
-	%>
-	<script type="text/javascript">
+	String check = (String) session.getAttribute("check");
+	if (check == null || check.equals("")) {
+	} else {
+%>
+<script type="text/javascript">
 	alert("<%=check%>");
 
 	</script>
-	
-	<% 
-	session.setAttribute("check","");
-}
+
+<%
+	session.setAttribute("check", "");
+	}
 %>
 <style type="text/css">
-.si{
-background: #8E8E8E;
+.si {
+	background: #8E8E8E;
 }
-.div1{
-margin:0px 20%;
+
+.div1 {
+	margin: 0px 20%;
 }
-div{
-width:auto;
+
+div {
+	width: auto;
 }
 </style>
- <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="../css/justified-nav.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="../css/justified-nav.css" rel="stylesheet">
 
 </head>
 <body>
-<div class="si">
-<div class="container">
-<div class="masthead">
-          <ul class="nav nav-justified">
-          <li><a href="../00/bootstrapceshi.jsp">首页</a></li>
-          <li><a href="#">时间</a></li>
-          <li class="active"><a href="../tain11/ceshi2.jsp">上传</a></li>
-          <li ><a href="../00/注册界面.jsp">注    册</a></li>
-          <li><a href="../00/Login.jsp">登    录</a></li>
-          <li><a href="../00/Login.jsp">退    出</a></li>
-        </ul>
-      </div>
-      </div>
-<form action="../tain11/ceshi3.jsp">
-<div class="div1">
-<div><button type="submit" >上传</button></div>
-<textarea rows="100" cols="100" name="txt" ></textarea>
-</div>
-</form>
-</div>
+	<%
+		String weo = "请先登录！";
+		String as = "";
+		String ch = (String) session.getAttribute("id");
+		if (ch == null || ch.equals("")) {
+			as = " disabled='disabled' ";
+	%>
+	<script type="text/javascript">
+	alert("<%=weo%>	");
+	</script>
+	<%
+		} else {
+
+		}
+	%>
+	<div class="si">
+		<div class="container">
+			<div class="masthead">
+				<ul class="nav nav-justified">
+					<li><a href="../00/bootstrapceshi.jsp">首页</a></li>
+					<li><a href="#">时间</a></li>
+					<li class="active"><a href="../tain11/ceshi2.jsp">上传</a></li>
+					<li><a href="../00/zhuche.jsp">注 册</a></li>
+					<%
+						String ww = "登    录";
+						String chw = (String) session.getAttribute("id");
+						if (chw == null || chw.equals("")) {
+						} else {
+							ww = chw;
+						}
+					%>
+					<li><a href="../00/Login.jsp"><%=ww%></a></li>
+					<li><a href="../00/tuichu.jsp">退 出</a></li>
+				</ul>
+			</div>
+		</div>
+		<form action="../tain11/ceshi3.jsp">
+			<div class="div1">
+				<div>
+					<button <%=as%> type="submit">上传</button>
+				</div>
+				<textarea <%=as%> rows="100" cols="100" name="txt"></textarea>
+			</div>
+		</form>
+	</div>
 </body>
 </html>

@@ -30,6 +30,7 @@
 
 			ResultSet rs = st.executeQuery();
 			if(rs.next()){
+				response.sendRedirect("../00/bootstrapceshi.jsp");
 				session.setAttribute("id", rs.getString("name"));
 			}else{
 				response.sendRedirect("../00/Login.jsp");

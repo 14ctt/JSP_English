@@ -34,7 +34,7 @@
           <li><a href="bootstrapceshi.jsp">首页</a></li>
           <li><a href="#">时间</a></li>
           <li><a href="#">上传</a></li>
-          <li><a href="注册界面.jsp">注    册</a></li>
+          <li><a href="zhuche.jsp">注    册</a></li>
           <li><a href="#">登    录</a></li>
           <li><a href="#">退    出</a></li>
         </ul>

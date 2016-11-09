@@ -5,6 +5,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>Insert title here</title>
+<%
+String check=(String)session.getAttribute("c2");
+if(check==null||check.equals("")){	
+}else{
+	%>
+	<script type="text/javascript">
+	alert("<%=check%>");
+
+	</script>
+	
+	<% 
+	session.setAttribute("c2","");
+}
+%>
    <style type="text/css">
    .ds{
     background: #8E8E8E;
@@ -41,7 +55,7 @@
             if (patt.test(uName)) {
                 return true;
             } else {
-                dvName.innerHTML = "用户昵称必须用英文、数字或下滑线（4~16个字符）";
+                dvName.innerHTML = "用户昵称必须用英文、数字或下滑线不能，用汉字（4~16个字符）";
                 return false;
             }
         }
@@ -132,19 +146,19 @@
           <li><a href="bootstrapceshi.jsp">首页</a></li>
           <li><a href="#">时间</a></li>
           <li><a href="../tain11/ceshi2.jsp">上传</a></li>
-          <li class="active"><a href="注册界面.jsp">注    册</a></li>
+          <li class="active"><a href="zhuche.jsp">注    册</a></li>
           <li><a href="../00/Login.jsp">登    录</a></li>
-          <li><a href="../00/Login.jsp">退    出</a></li>
+          <li><a href="../00/tuichu.jsp">退    出</a></li>
         </ul>
       </div>
-    <form method="get" action="success.html" onsubmit="return checkAll()">
+    <form method="get" action="insert_zhuche.jsp" onsubmit="return checkAll()">
        
         <div id="inc">
-            昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：<input type="text" id="uName" size="16"><div id="dvName"></div><br />
-            密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" id="uPwd" size="16"><div id="dvPwd"></div><br />
+            昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：<input name="name" type="text" id="uName" size="16"><div id="dvName"></div><br />
+            密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：<input name="password" type="password" id="uPwd" size="16"><div id="dvPwd"></div><br />
             确认密码：<input type="password" id="uPwd2" size="16"><div id="dvPwd2"></div><br />
-            出生日期：<input type="text" id="uBirth" size="16"><div id="dvBirth"></div><br />
-            电子邮件：<input type="text" id="uEmail" size="16"><div id="dvEmail"></div><br />
+            出生日期：<input name="rq" type="text" id="uBirth" size="16"><div id="dvBirth"></div><br />
+            电子邮件：<input name="yj" type="text" id="uEmail" size="16"><div id="dvEmail"></div><br />
        <br />
         <input type="submit" value="提交注册">&nbsp;&nbsp;<input type="reset" value="重置">
         </div>

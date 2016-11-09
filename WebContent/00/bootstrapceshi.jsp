@@ -48,12 +48,20 @@
       <div class="masthead">
         
         <ul class="nav nav-justified">
-          <li class="active"><a href="">首页</a></li>
+          <li class="active"><a href="../00/bootstrapceshi.jsp">首页</a></li>
           <li><a href="#">时间</a></li>
           <li><a href="../tain11/ceshi2.jsp">上    传</a></li>
-          <li><a href="注册界面.jsp">注    册</a></li>
-          <li><a href="../00/Login.jsp">登    录</a></li>
-          <li><a href="../00/Login.jsp">退    出</a></li>
+          <li><a href="zhuche.jsp">注    册</a></li>
+          <%
+          	String ww = "登    录";
+          	String check = (String) session.getAttribute("id");
+          	if (check == null || check.equals("")) {
+          	} else {
+          		ww = check;
+          	}
+          %>
+          <li><a href="../00/Login.jsp"><%=ww %></a></li>
+          <li><a href="../00/tuichu.jsp">退    出</a></li>
         </ul>
       </div>
 

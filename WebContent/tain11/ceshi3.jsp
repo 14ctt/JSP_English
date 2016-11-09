@@ -24,7 +24,12 @@
 // 		stmt.executeUpdate("insert into txt values('','')");
 		String sql="insert into daima values(?,?)";
 		PreparedStatement ps = conn.prepareStatement(sql);
-		String id=request.getParameter("id");
+		
+		String id=request.getParameter("id");		
+      	String check = (String) session.getAttribute("id");
+      	if (!(check == null || check.equals(""))) {
+      		id=check;
+      	}		
 		String txt=request.getParameter("txt");
 		ps.setString(1, id);
 		ps.setString(2, txt);
